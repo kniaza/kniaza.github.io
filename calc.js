@@ -1,7 +1,3 @@
-var calc = new Calculator();
-function Calculator(){
-   return this.calc;
-}
 calc = {
   a: 0,
   b: 0,
