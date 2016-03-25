@@ -1,0 +1,16 @@
+.wrapper {
+  width: 800px;
+  height: 350px;
+}
+
+#divXml, #divJson {
+  width: 350px;
+  height: 300px;
+  float: left;
+}
+
+#xmlInput, #jsonOutput {
+  width: 350px;
+  height: 300px;
+  resize: none;
+}
