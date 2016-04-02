@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encrypt</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        form {
+            width: 95%;
+            margin: 50px auto;
+        }
+        #text {
+            width: 49%;
+            height: 150px;
+            float: left;
+        }
+
+        #encrypt_or_decrypt {
+            width: 49%;
+            height: 150px;
+            float: right;
+        }
+
+        .form-group {
+            overflow: hidden;
+        }
+        button.btn {
+            width: 49%;
+            margin: 0 !important;
+            text-transform: uppercase;
+        }
+        button#encrypt {
+
+            float: left;
+        }
+        button#decrypt {
+            float: right;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>Gurami's cipher</h1>
+
+<form action="/" method="get">
+    <div class="form-group">
+        <textarea name="text" id="text" class="form-control"></textarea>
+        <textarea name="encrypt" id="encrypt_or_decrypt" class="form-control"></textarea>
+    </div>
+
+    <button type="button" id="encrypt" class="btn btn-success btn-lg btn-block">encrypt</button>
+    <button type="button" id="decrypt" class="btn btn-danger btn-lg btn-block">decrypt</button>
+</form>
+
+
+<script src="encrypt.js"></script>
+
+</body>
+</html>
