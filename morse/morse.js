@@ -77,7 +77,7 @@ window.onload = function(){
 
         var result = text.map(function(item){
             if(item === " " || item === '\n') item = "\u00A0";
-            else item.toLowerCase();
+            else item = item.toLowerCase();
             return __self.alphabet[item];
         });
 
@@ -98,6 +98,7 @@ window.onload = function(){
         var __self = this;
         text = text.split(' ');
         var result = text.map(function(item){
+
             if(item === '/') {
                 item = '\u00A0';
             } else {
