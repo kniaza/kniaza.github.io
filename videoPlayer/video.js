@@ -91,7 +91,7 @@
     videoElem.playList.onclick = function(e){
         e.preventDefault();
         console.log(e.target.href);
-        videoElem.video.children[0].src = e.target.href;
+        videoElem.video.src = e.target.href;
         videoElem.videoTitle.children[0].innerHTML = e.target.innerHTML;
     };
     
