@@ -11,6 +11,7 @@ body {
 #my_video {
     float: left;
     width: 70%;
+    height: 374px;
 }
 
 #playlist {
@@ -24,8 +25,25 @@ body {
 }
 
 .clr {
-    clear: both;
+clear: both;
 }
+
+.btn {
+    border: 1px solid #fff;
+    background: #4DB6AC;
+    border-radius: 3px;
+    padding: 5px 15px;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+}
+.btn:hover {
+    background: #26A69A;
+}
+.btn:active {
+    background: #009688;
+}
+
 
 .video_list_name {
     display: block;
@@ -36,6 +54,10 @@ body {
     text-decoration: none;
 }
 .video_list_name:hover {
+    background: #6F6F6F;
+}
+
+.active {
     background: #6F6F6F;
 }
 
