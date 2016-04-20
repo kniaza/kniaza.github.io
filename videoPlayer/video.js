@@ -10,6 +10,7 @@
         video : document.getElementById('my_video'),
         videoTitle : document.getElementById('video_title'),
         playList : document.getElementById('playlist'),
+        playListItem : document.getElementsByClassName('video_list_name'),
         controlsBar : document.getElementById('controls_bar'),
         playPause : document.getElementById('play_pause_btn'),
         stop : document.getElementById('stop_btn'),
@@ -102,8 +103,7 @@
 
         var progress = parseFloat((controls.buffered.offsetWidth / videoElem.video.duration ) * videoElem.video.currentTime);
         
-        console.log(  formatTime(  parseFloat(  (progress  / videoElem.video.duration) * 3.  )  )  );
-        // TODO : progressbarze dacherisas daiwyos im droidan
+
         controls.progress.style.width = progress + 'px';
 
     }
@@ -185,11 +185,26 @@
 
             if(videoElem.playList.children[i].children[0].classList[1] === 'active'){
 
-                //TODO : pirvelze dacherisas gaqres winaze gadasvla boloze dacherisas gaqres shemdegze gadasvla
-
                 videoElem.playList.children[i].children[0].classList.remove('active');
                 e.target.classList.add('active');
                 controls.currentTime.innerHTML = formatTime(0);
+
+
+                for(var j = 0; j < videoElem.playListItem.length; j++){
+                    if(e.target.innerHTML === videoElem.playListItem[0].innerHTML) {
+                        videoElem.backward.style.display = 'none';
+                        videoElem.forward.style.display = '';
+                    } else if(e.target.innerHTML === videoElem.playListItem[videoElem.playListItem.length - 1].innerHTML) {
+                        videoElem.forward.style.display = 'none';
+                        videoElem.backward.style.display = '';
+                    } else {
+                        videoElem.forward.style.display = '';
+                        videoElem.backward.style.display = '';
+                    }
+                }
+
+
+
             }
         }
 
@@ -214,6 +229,7 @@
     videoElem.stop.addEventListener('click', stopVideo);
     videoElem.forward.addEventListener('click', nextVideo);
     videoElem.backward.addEventListener('click', previousVideo);
+
     videoElem.video.addEventListener('mouseover', titleShow);
     videoElem.video.addEventListener('mouseout', titleHidd);
 
